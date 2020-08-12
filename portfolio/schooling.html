@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ *{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    color: #292f3d;
+}
+#nav{
+    flex: 2.66%;
+    border-right: 0.5px solid gray;
+    margin-left: -8px;
+}
+#nav button{
+    width: 100%;
+    font-size: 10px;
+    padding: 9px;
+}
+#main{
+    flex: 97.33%;
+}
+#ain{
+    display: flex;
+    position: relative;
+    top: -18px;
+}
+#content{
+    flex: 80%;
+}
+#aside{
+    flex: 20%; 
+    position: relative;
+    width: 100%;
+}
+#sub-con{
+  display: flex;
+  position: relative;
+  top: -277px;
+  background-color: #edeff3;
+  border: 15px solid #edeff3;
+  font-size: 15px;
+}
+#con-left{
+  flex: 35%;
+  margin-top: 50px;
+  margin-right: 15px;
+}
+#con-con{
+  flex: 65%;
+}
+.article, .schooling{
+  background-color: white;
+  margin-right: 20px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.x{
+  border: 5px solid white;
+  width: 100%;
+  margin-top: -8px;
+  background-color: white;
+  padding: 0px;
+  border-radius: 3px;
+  font-size: 14px;
+}        
+.y{
+  border: 5px solid white;
+  width: 100%;
+  margin-top: 8px;
+  background-color: white;
+  padding: 0px;
+  border-radius: 3px;
+  font-size: 14px;
+}    
+.z{
+  border: 5px solid white;
+  width: 100%;
+  margin-top: -10px;
+  background-color: white;
+  padding: 0px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+#ab{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  color: rgb(6, 151, 187);
+  text-align: center;
+  display: inline-block;
+  border-left: 2px solid #18F4FF;
+}
+#ad{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  color: #5C708A;
+  text-align: center;
+  display: inline-block;
+}
+#ad:hover {
+  background-color: lightgrey;
+}
+#f{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  color:   #5C708A;
+  text-align: center;
+  display: inline-block;
+  margin-top: 155px;
+}
+#f:hover {
+  background-color: lightgrey;
+  }
+  #loa:hover{
+    cursor: pointer;
+  }
+  #lob:hover{
+    cursor: pointer;
+  }
+.et{
+    padding-top: 15px;
+    padding-left: 40px;
+}
+.imagestwo{
+  position: relative;
+  top: -285px;
+  left: 670px;
+  width: 400px;
+  height: 300px;
+}
+.imagesw{
+  float: right; 
+  position: relative;
+  top: -335px;
+  background-color: #4c4dea;
+  width: 200px;
+  height: 300px;
+}
+.projects{
+  display: flex;
+  border: .5px solid white;
+  background-color: #edeff3;
+  outline: none;
+  padding: 35px;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-right: 20px;
+} 
+.one,.two{
+  margin: 9px;
+  top: 14px;
+  border-radius: 13px;
+}
+.one{
+  border: none;
+  background-color: rgba(247, 242, 242, 0.979);
+  outline: none;
+  padding: 35px;
+  font-size: 45px;
+  }
+.one:hover{
+  background-color: rgb(202, 199, 199);
+}
+.two{
+  border: none;
+  color: white;
+  background-color: #ea4c89;
+  outline: none;
+  padding: 35px;
+  font-size: 45px;
+}
+.two:hover{
+  background-color: rgb(243, 157, 171);
+}
+.av{
+  position: relative;
+  left: 330px;
+} 
+#sliderr{
+  margin: 0;
+  width: 790px;
+  max-width: 100%;
+  text-align: center;
+  }
+#sliderr input[type=radio]{
+  display: none;
+  }
+#sliderr label{
+  cursor: pointer;
+  text-decoration: none;
+}
+#sliderr #slides{
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  top: 40px;
+  z-index: 1;
+}
+#sliderr #overflow{
+  width: 100%;
+  overflow: hidden;
+}
+#sliderr #slid1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#sliderr #slid2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+#sliderr #slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+  width: 400%;
+  line-height: 0;
+  height: 250px;
+}
+#sliderr #slides .slide{
+  width: 25%;
+  float: left;
+  display: flex;
+  height: 100%;
+  color: #fff;
+}
+#sliderr #controls1{
+  margin: 150px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+#sliderr #controls1 label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 20px;
+  height: 20px;
+  opacity: .4;
+}
+#sliderr #controls1 label:hover{
+  opacity: 1;
+}
+#sliderr #slid1:checked ~ #controls1 label:nth-child(2),
+#sliderr #slid2:checked ~ #controls1 label:nth-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: -50px 358px 0 0;
+  display: block;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #fff;
+}
+#sliderr #slid1:checked ~ #controls1 label:nth-last-child(2),
+#sliderr #slid2:checked ~ #controls1 label:nth-last-child(2) {
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: -50px 0 0 368px;
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#sliderr label{
+  text-align: center;
+  margin: -380px 0 0 0;
+}
+#sliderr .j label{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 20px 0 0 10px;
+}
+#sliderr .l label{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 20px 0 0 10px;
+}
+#sliderr #slid1:checked ~ #bullets1 .l label:nth-child(1),
+#sliderr #slid2:checked ~ #bullets1 .j label:nth-child(1){
+    background: #3392FF;
+    width: 15px;
+    height: 15px;
+}
+a{
+  text-decoration: none;
+  color: #292f3d;
+}
+.slide-content2{
+  color: rgb(6, 151, 187);
+  padding: 22px 10px 22px 10px;
+  border-bottom: 3px solid #18F4FF;
+}
+#slider{
+  width: 800px;
+  text-align: center;
+}
+#slider input[type=radio]{
+  display: none;
+}
+#slider label{
+  cursor: pointer;
+  text-decoration: none;
+}
+#overflow{
+  width: 100%;
+  overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+  width: 100%;
+  line-height: 0;
+  height: 80px;
+}
+#slides .av{
+  margin-left: 0px;
+  width: 100px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+@media only screen and (min-width: 768px){
+  body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #nav{
+    margin-left: -8px;
+  }
+  #content{
+    width: 1200px;
+    height: 710px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #aside{
+    position: relative;
+    left: 10px;
+    right: 18px;
+    width: 230px;
+    height: 710px;
+    margin-right: 8px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #m{
+    display: none;
+  }
+#sliderr #bullets1{
+  text-align: center;
+  margin: -450px 0 0 0;
+}
+#sliderr #bullets1 label{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+.l{
+    position: relative; 
+    left: -650px;
+    padding-right: 3px;
+}
+.l1{
+    position: relative; 
+    left: 13px;
+     top: -16px;
+}
+.l2{
+    position: relative; 
+    left:50px;
+    top: -49px;
+}
+.j{
+   position: relative;
+   right: -300px;
+   top: -79px;
+}
+.j1{
+    position: relative; 
+    left: 13px; 
+    top: -18px;
+}
+.j2{
+    position: relative;
+    left: 50px;
+    top: -50px;
+}
+hr{
+    border-top: 1px dashed lightgray;
+    width: 850px;
+    position: relative;
+    top: -63px;
+    left: -170px;
+}
+header input[type=text]{
+  border: none;
+  outline: none;
+  }
+  header input[type=text]:hover{
+  border: none;
+  border-color: white;
+  outline: none;
+  border-bottom: 2px solid rgb(31, 172, 207);
+  }
+  .lo1{
+  color: #5C708A;text-align: center;position: relative;left: 87px;top: 10px;font-weight: 600;
+}
+  .lo{
+  background: #F0F1F5;border-radius: 4px;width: 240px;height: 215px;padding: 15px 20px 15px 20px;margin-bottom: 10px;
+  }
+  .loa{
+    margin-left: 34px;margin-bottom: -5px;font-size: 15px;
+  }
+  .lob{
+    margin-top: -5px;margin-left: 15px;line-height: 25px;
+  }
+  .loc{
+    font-size: 12px;position: relative;left: 16px;
+  }
+  #loa{
+    background: #fff;padding: 7px;border-radius: 50%;margin-left: 50px;margin-right: 20px;
+  }
+  #lob{
+    background: #fff;padding: 7px;border-radius: 50%;margin-right: 40px;
+  }
+  #slider #slides{
+  position: relative;
+  width: 1500px;
+  left: 30px;
+  top: -260px;
+  position: relative;
+}
+}
+@media only screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
+  #nav{
+  display: none;
+}
+  main{
+  flex: none;
+}
+  #ain{
+  display: block;
+}
+  .et{
+  position: relative;
+  top: 350px;
+  margin-left: -35px;
+}
+header{
+  margin-left: 40px;
+}
+  #sub-con{
+  display: block;
+  position: relative;
+  top: -100px;
+  display: flexbox;
+  width: 375px;
+  flex: none;
+  margin-right: 2px;
+  height: 780px;
+}
+  #con-left{
+  position: relative;
+  top: 20px;
+  flex: none;
+  width: 320px;
+  
+}
+ #con-con{
+  margin-top: 10px;
+  flex: none;
+  width: 340px;
+  height: 800px;
+  margin-left: 15px;
+}
+.av{
+  position: relative;
+  left: 10px;
+  }
+ .imagestwo{
+  position: relative;
+  top: -590px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+}
+ .imagesw{
+  float: none;
+  position: relative;
+  left: 170px;
+}
+  #aside{
+  position: relative;
+  top: -105px;
+  height: 1210px;
+  }
+  #h{
+    display: none;
+  }
+  #aside{
+    margin-left: 0px;
+  }
+  
+.l{
+    position: relative; 
+    top: -30px;
+    left: -110px;
+}
+.l1{
+    position: relative; 
+    left: 13px;
+     top: -17px;
+}
+.l2{
+    position: relative; 
+    left:50px;
+    top: -50px;
+}
+.j{
+   position: relative;
+   left: -110px;
+   top: -40px;
+}
+.j1{
+    position: relative; 
+    left: 13px; 
+    top: -17px;
+}
+.j2{
+    position: relative; 
+    left: 50px;
+    top: -50px;
+}
+  .vl {
+    position: relative;
+    left: 102px;
+    bottom: 55px;
+    border-left: 1px solid lightgray;
+    height: 45px;
+  }
+  #sliderr{
+    margin: -3px 30px 0 -40px;
+  padding-right: 5px;
+    width: 330px;
+    max-width: 100%;
+  text-align: center;
+}
+  
+#sliderr input[type=radio]{
+  display: none;
+  }
+  #sliderr #slides{
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  top: 40px;
+  z-index: 1;
+}
+  #sliderr #overflow{
+  width: 100%;
+  overflow: hidden;
+}
+#sliderr #slid1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#sliderr #slid2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+#sliderr #slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+  width: 400%;
+  line-height: 0;
+  height: 340px;
+}
+#sliderr #slides .slide{
+  width: 25%;
+  display: block;
+  height: 100%;
+  color: #fff;
+}
+#slides .slide_1{
+  background: #fff;
+}
+#slides .slide_2{
+  background: #fff;
+}
+#sliderr #controls1{
+  margin: 50px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+#sliderr #controls1 label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 30px;
+  height: 30px;
+  opacity: .4;
+}
+#sliderr #controls1 label:hover{
+  opacity: 1;
+}
+  #sliderr #slid1:checked ~ #controls1 label:nth-child(2),
+  #sliderr #slid2:checked ~ #controls1 label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 85px 0 0;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+  }
+  #sliderr #slid1:checked ~ #controls1 label:nth-last-child(2),
+  #sliderr #slid2:checked ~ #controls1 label:nth-last-child(2){
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 145px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+  }  
+#sliderr #bullets1{
+  text-align: center;
+  margin: -740px -30px 0 30px;
+}
+#sliderr #bullets1 label{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ccc;
+  margin: 0 -20px 0 70px;
+}
+#sliderr #slid1:checked ~ #bullets1 .l label:nth-child(1),
+#sliderr #slid2:checked ~ #bullets1 .j label:nth-child(1){
+  background: #3392FF;
+}  
+#slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(1),
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(1){
+    margin: 0;
+  }      
+  #slider{
+    width: 300px;
+    margin-left: -10px;
+    text-align: center;
+  }
+  #slider input[type=radio]{
+    display: none;
+  }
+  #slider label{
+    cursor: pointer;
+    text-decoration: none;
+  }
+  #slides{
+    position: relative;
+    left: 20px;
+    top: -200px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  #overflow{
+    width: 100%;
+    overflow: hidden;
+  }
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+  }
+  #slide2:checked ~ #slides .inner {
+    margin-left: -85%;
+  }
+  #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 100px;
+  }
+  #slides .av{
+    margin-left: -5px;
+    width: 91px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+  }
+  #slides .av1{
+    background: #fff;
+  }
+  #slides .av2{
+    background: #fff;
+  }
+  #slides .av3{
+    background: #fff;
+  }
+  #controls{
+    margin: -310px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+  }
+  #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 22px;
+    height: 22px;
+    opacity: .4;
+  }
+  #controls label:hover{
+    opacity: 1;
+  }
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 50px -60px 0 0;
+    display: block;
+  }
+  #slide1:checked ~ #controls label:nth-last-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(2) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 50px 0 0 10px;
+    display: block;
+  }
+    #bullets{
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+    #bullets label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+  }
+  #slide1:checked ~ #bullets label:nth-child(1),
+  #slide2:checked ~ #bullets label:nth-child(2){
+    background: #444; 
+  }
+  header input[type=text]{
+  border: none;
+  font-size: 18px;
+  outline: none;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+  }
+  header input[type=text]:hover{
+  border: none;
+  border-color: white;
+  outline: none;
+  border-bottom: 2px solid rgb(31, 172, 207);
+  }
+  .lo{
+  background: #F0F1F5;border-radius: 4px;width: 330px;height: 225px;padding: 15px 20px 15px 20px;margin-bottom: 10px;
+  }
+  .loa{
+    margin-left: 54px;margin-bottom: -5px;font-size: 17px;
+  }
+  .lob{
+    margin-top: -5px;position: relative;left: 41px;line-height: 25px;
+  }
+  .loc{
+    font-size: 14px;position: relative;left: 28px;
+  }
+  #loa{
+    background: #fff;padding: 9px;border-radius: 50%;margin-left: 90px;margin-right: 20px;
+  }
+  #lob{
+    background: #fff;padding: 9px;border-radius: 50%;margin-right: 40px;
+  }
+  .lo1{
+  color: #5C708A;text-align: center;position: relative;left: 130px;top: 10px;font-weight: 600;
+}
+}
+</style>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body >
+<div id="nav">
+  <i id="q" class='fab fa-linkedin' style='font-size:29px ;background-color: rgb(31, 172, 207); color: white; text-align: center; padding: 4px;border-radius: 4px;margin-left: 20px; margin-bottom: 34px;'></i>
+  <button id="ab"><span class="material-icons">person_outline</span><br><br><br> <strong>PROFILE</strong></button>
+  <button id="ad"><span class="material-icons">people_outline</span><br><br><br> <strong>NETWORK</strong></button>
+  <button id="ad"><span class="material-icons">work_outline</span><br><br><br> <strong>JOBS</strong></button>
+  <button id="ad"><span class="material-icons">insert_chart_outlined</span><br><br><br> <strong>GROUPS</strong></button>
+  <button id="ad"><span class="material-icons">chat_bubble_outline</span><br><br><br> <strong>MEASSAGING</strong></button>
+  <button id="f"><span class="material-icons">apps</span><br><br><br> <strong>WORK</strong></button>
+</div>
+<div id="main">
+    <header style="padding: 0 0 15px 0;border-bottom: .1px solid lightgray;;"><button type="submit" style="padding: 6px 3px; margin-top: 2px;margin-right: 5px; background: white; font-size: 18px; border: none; cursor: pointer;position: relative;top: 7px;"><i class="fa fa-search" style="font-size: 18px;color: #5C708A;"></i></button> 
+    <input type="text" placeholder="Search" name="search">
+    <i id="h" class='far fa-bell ne' style='font-size: 19px; margin-left: 10px; padding: 10px 10px 0px 10px; float: right;'></i>
+    <i id="h" class='far fa-question-circle ne' style='font-size:19px;  padding: 10px; margin-left: 10px 10px 0px 10px; float: right;'></i>
+    </i><i id="h" class='far fa-keyboard ne' style='font-size: 19px; padding: 10px 10px 0px 10px;margin-left: 10px; float: right;'></i>
+    <i id="h" class='far fa-user ne' style='font-size: 19px;margin-left: 10px;  padding: 10px 10px 0px 10px; float: right;'></i>
+    </header>
+    <img src="lin.jpg" style="width: 40px;height: 40px; position: relative;top: -50px;" id="m">
+    <br>
+    <div id="ain">
+        <div id="content">
+            <div  class="et">
+                <img src="Me.jpg"  style="color: #292f3d; width: 100px; height: 100px; border-radius: 50%;"></img>
+                <p style="font-size: 20px;">Gali SaiPrasad</p>
+                <h3 style="font-size: 25px;">Welcome to my design <br/> Portfolio</h3>
+                <button class="one" style="font-size: 10px; padding: 18px;"><i class='fas fa-plus' > Follow</i></button>
+                <button class="two" style="font-size: 10px; padding: 18px;"><i class="fas fa-envelope" > Hire Me</i></button>
+            </div> 
+                    
+            <div class="ut">
+              <img class="imagesw"></img>
+              <img class="imagestwo" src="333333.jpg"></img>
+            </div>
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+        
+                <div id="slides">
+                    <div id="overflow">
+                       <div class="inner">
+                        <div class="av av1" style="font-size: small;font-family: Arial, Helvetica, sans-serif;">
+                            <div class="slide-content1">
+                                <a href= "about.html" target="_self" class="abo"><strong>ABOUT</strong></a>
+                            </div>
+                        </div>
+                  
+                        <div class="av av2" style="font-size: small;">
+                          <div class="slide-content2">
+                              <a  href= "school.html" target="_self" class="abp" style="color: #3392FF;"><strong>SCHOOLING</strong></a>
+                          </div>
+                      </div>  
+
+                        <div class="av av3" style="font-size: small;">
+                          <div class="slide-content3">
+                              <a  href= "projects.html" target="_self" class="abg"><strong>PROJECTS</strong></a> 
+                          </div>
+                      </div>  
+
+                        <div class="av av3" style="font-size: small;">
+                            <div class="slide-content4">
+                                <a  href= "projects.html" target="_self" class="abp"><strong>EXPERIENCE</strong></a>
+                            </div>
+                        </div>  
+                        <div class="av av4" style="font-size: small;">
+                          <div class="slide-content4" style="margin-left: 25px;">
+                              <a  href="projects.html" target="_self" class="abg"><strong>CERTIFICATES</strong></a> 
+                          </div>
+                      </div> 
+                       </div> 
+                    </div>
+                </div>    
+                <div id="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                </div>
+            </div>
+            <div id="sub-con">
+                <div id="con-left"  style="color: #292f3d;">
+                    <div class="vl"></div>
+                    <table class="z">
+                        <tr>
+                          <td><img src="lin.jpg" style="width: 40px; height: 40px;"></td>
+                          <td style="line-height: 2px;"><p style="line-height: 3px;"><b>Linkedin</b></p><p style="line-height: 13px;">Profession: Student(2017-2021)</p></td>
+                        </tr>
+                    </table>
+                    
+                    <table class="y">
+                        <tr>
+                          <td><img src="logo.jpg" style="width: 40px; height: 40px;"></td>
+                          <td style="line-height: 2px;"><p style="line-height: 13px;"><b>Panimalar Institute of Technology</b></p><p style="line-height: 3px;">B.E ,E.C.E</p></td>
+                        </tr>
+                    </table>
+              
+                    <table class="x">`
+                          <tr>  
+                            <td><img src="tpt.jpg" style="width: 40px; height: 40px;"></td>
+                            <td style="line-height: 2px;"><p style="line-height: 3px;"><b>Studies At</b></p><p style="line-height: 13px;">Place: Tirupati,Andhra Pradesh,India</p></td>
+                          </tr>
+                    </table>
+                </div>
+
+                <div id="con-con"  style="color: #292f3d;">
+                    <div id="sliderr">
+                        <input type="radio" name="sliderr" id="slid1" checked>
+                        <input type="radio" name="sliderr" id="slid2">
+                        
+                        <div id="slides">
+                            <div id="overflow">
+                               <div class="inner">
+                                    <div class="slide slide_1">
+                                        <div class="slide-content"  style="color: #292f3d;line-height: 15px;">
+                                          <h4><strong>Schooling</strong></h4>
+                                          <br>
+                                          <center>
+                                          <table><tr><td> <td><img src="nara.jpg" style="width: 30px; height: 30px;"></td></td><td><p style="color: black;">Narayana School</p></td></tr></table>
+                                        </center><br>
+                                          <p>I did my schooling in <b> MPC </b> at <b>Narayana Schools</b>,<b>Tirupati</b>.where I startd to think about my future and I always concentrated in my work.To make my parents Happy with my results and worked hard for that. </p>
+                                      </div>  
+                                    </div>
+                
+                                    <div class="slide slide_2">
+                                        <div class="slide-content"  style="color: #292f3d;line-height: 15px;" >
+                                          <h4><strong>College</strong></h4>
+                                          <br>
+                                          <center>
+                                          <table><tr><td> <td><img src="logo.jpg" style="width: 30px; height: 30px;"></td></td><td><p style="color: black;">Panimalar Institue Of Technology</p></td></tr></table>
+                                        </center>
+                                           <br>
+                                          <p>I did my engineering in <b>Electronics and Communication Engineering </b> at <b >Panimalar Institute of Technology</b>,<b>Chennai.</b></p> <p> Where I'm doing my B.E,currently final year and this college me a great exposure to the society and also make me to stand and made me be moreconfident when i stood in a crowd.</p>
+                                      </div> 
+                                    </div>  
+                                </div> 
+                            </div> 
+                        </div>       
+                        <div id="controls1">
+                            <label for="slid1"></label>
+                            <label for="slid2"></label>
+                        </div>
+                        <div id="bullets1"> 
+                         <div class="l"><label for="slid1"><p class="l1" style=" color: #5C708A; margin-left: 5px;">2002-</p><p class="l2"  style=" color: #5C708A; margin-left: 5px;">2015</p></label></div><hr>
+                         <div class="j"><label for="slid2"><p class="j1" style=" color: #5C708A; margin-left: 5px;">2017-</p><p class="j2"  style=" color: #5C708A; margin-left: 5px;">2021</p></label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div id="aside"  style="color: #292f3d;">
+                  <h2  style="color: #5C708A;font-size: 13px;">SKILLS</h2>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <tr>
+                  <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+                  <td  style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">Web developement</p> <p style="color: #5C708A;font-size: 13px;font-weight: 400;">Certified From FreeCode Camp</p></td>
+                  </tr>
+                  </table>
+                  <br>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <tr>
+                  <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+                  <td style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">Programming </p> <p style="color: #5C708A;font-size: 13px;font-weight: 400">Developing Gradually</p></td>
+                  </tr>
+                  </table>
+                  <br>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <tr>
+                  <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+                  <td style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">JavaScript</p> <p style="color: #5C708A;font-size: 13px;">Certified From Freecode Camp</p></td>
+                  </tr>
+                  </table>
+                  <br>
+                  <h2  style="color: #5C708A;font-size: 13px;">INTERESTS</h2>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <td><img src="htm.png" style="width: 40px; height: 40px;"></td>
+                  <td style="line-height: 4px; padding-left: 10px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">HTML</p> <p style="color: #5C708A;font-size: 13px;">12,34,567 Followers</p></td>
+                  </tr>
+                  </table>
+                  <br>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <tr>
+                  <td><img src="cs.png" style="width: 40px; height: 40px;"></td>
+                  <td style="line-height: 4px; padding-left: 10px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">CSS</p> <p style="color: #5C708A;font-size: 13px;">2,34,567 Followers</p></td>
+                  </tr>
+                  </table>
+                  <br>
+                  <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <tr>
+                  <td><img src="js.png" style="width: 30px; height: 30px;"></td>
+                  <td style="line-height: 4px; padding-left: 20px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">JavaScript</p> <p style="color: #5C708A;font-size: 13px;"> 11,04,567 Followers</p></td>
+                  </tr>
+                  </table>
+                  <h2 style="font-size: 15px;color: #5C708A">Contact Me :</h2>
+                  <table>
+                    <tr>
+                      <td><img src="mal.png" style="width: 30px; height: 20px;"></td>
+                      <td style="padding-left: 7px;color: #292f3d;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">E-Mail</a></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table>
+                    <tr>
+                      <td><img src="ked.png" style="width: 30px; height: 30px; color: gray;"></td>
+                      <td style="padding-left: 7px;color: #292f3d;"><a href="www.linkedin.com/in/gali-sai-prasad-376195154">LinkedIn</a> 
+                    </tr>
+                   </table>
+                   <br>
+                   <table>
+                    <tr>
+                      <td><i class="fa fa-phone" style="font-size:24px; padding-left: 8px;"></i></td>
+                      <td style="padding-left: 7px;color: #292f3d;"> 9121898369 </td>
+                    </tr>
+                  </table>
+                  <div class="lo" style="margin-left: 10px;">
+                    <table>
+                    <tr><td class="lo1">Ad</td></tr>
+                  </table>
+                    <br>
+                    <br>
+                    <table>
+                    <tr><span class="material-icons" id="loa">business</span><span class="material-icons" id="lob">group</span></tr>
+                    <tr><p class="loa">Guest, explore relevant</p></tr>
+                    <tr><p class="lob">opportunities with LinkedIn</p></tr>
+                    <tr><td class="loc">Get the latest jobs and industry news</td></tr>
+                  </table>
+                  <br>
+                  <h4 style="color: #5C708A;font-size: 13px;font-weight: 700;margin-left: -6px;">QUICK LINKS</h4>
+                  <div style="margin-left: -6px;">
+                    <table>
+                    <tr class="fr"><span class="material-icons" style="color: #5C708A;">insert_link</span><p style="margin-top: -25px;margin-left: 40px;font-size: 16px;font-weight: 400;">About</p></tr>
+                    <tr class="fr"><span class="material-icons" style="color: #5C708A;">insert_link</span><p style="margin-top: -25px;margin-left: 40px;font-size: 16px;font-weight: 400;">Careers</p></tr>
+                   <tr class="fr"><span class="material-icons" style="color: #5C708A;">insert_link</span><p style="margin-top: -25px;margin-left: 40px;font-size: 16px;font-weight: 400;">Ad Choices</p></tr>
+                    <tr class="fr"><span class="material-icons" style="color: #5C708A;">insert_link</span><p style="margin-top: -25px;margin-left: 40px;font-size: 16px;font-weight: 400;">Business Services</p></tr>
+                    <tr class="fr"><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="mnnn" style="margin-top: -25px;margin-left: 40px;font-size: 16px;font-weight: 400;">Privacy & Terms</p></tr>
+                  </table>
+                  </div>
+                </div>
+                  </div>
+                </div>
+            </div>
+</body>
+</html>

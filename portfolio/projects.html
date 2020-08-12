@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ *{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    color: #292f3d;
+}
+#nav{
+    flex: 2.66%;
+    border-right: 0.5px solid gray;
+    margin-left: -8px;
+}
+#nav button{
+    width: 100%;
+    font-size: 10px;
+    padding: 9px;
+}
+#main{
+    flex: 97.33%;
+}
+#ain{
+    display: flex;
+    position: relative;
+    top: -18px;
+}
+#content{
+    flex: 80%;
+}
+#aside{
+    flex: 20%; 
+    position: relative;
+    left: 40px;
+    width: 100%;
+}
+#sub-con{
+  display: flex;
+  position: relative;
+  top: -277px;
+  background-color: #edeff3;
+  border: 15px solid #edeff3;
+  font-size: 15px;
+}
+.article, .schooling{
+  background-color: white;
+  margin-right: 20px;
+  border-radius: 3px;
+  padding: 10px;
+}
+#ab{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  color: rgb(6, 151, 187);
+  text-align: center;
+  display: inline-block;
+  border-left: 4px solid #18F4FF;
+}
+#ad{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+  color: #5C708A;
+  text-align: center;
+  display: inline-block;
+}
+#ad:hover {
+  background-color: lightgrey;
+}
+#f{
+  border: 1px solid white;
+  background-color: white;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+  color:   #5C708A;
+  text-align: center;
+  display: inline-block;
+  margin-top: 155px;
+}
+#f:hover {
+  background-color: lightgrey;
+}
+  #loa:hover{
+    cursor: pointer;
+  }
+  #lob:hover{
+    cursor: pointer;
+  }
+.et{
+    padding-top: 15px;
+    padding-left: 40px;
+}
+.imagestwo{
+  position: relative;
+  top: -285px;
+  left: 670px;
+  width: 400px;
+  height: 300px;
+}
+.imagesw{
+  float: right; 
+  position: relative;
+  top: -335px;
+  background-color: #4c4dea;
+  width: 200px;
+  height: 300px;
+}
+.projects{
+  display: flex;
+  outline: none;
+  font-size: 15px;
+  margin-top: -4px;
+  position: relative;
+  left: -5px;
+}
+.r{
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  background-color: #F0F1F5;
+  border-radius: 22px;
+  color: #5C708A"
+}
+ .r:hover{
+   color: #fff;
+  background-color: #18F4FF;
+}
+header input[type=text]{
+  border: none;
+  outline: none;
+  }
+  header input[type=text]:hover{
+  border: none;
+  border-color: white;
+  outline: none;
+  border-bottom: 2px solid rgb(31, 172, 207);
+  }
+.one,.two{
+  margin: 9px;
+  top: 14px;
+  border-radius: 13px;
+}
+.one{
+  border: none;
+  background-color: rgba(247, 242, 242, 0.979);
+  outline: none;
+  padding: 35px;
+  font-size: 45px;
+  }
+.one:hover{
+  background-color: rgb(202, 199, 199);
+}
+.two{
+  border: none;
+  color: white;
+  background-color: #ea4c89;
+  outline: none;
+  padding: 35px;
+  font-size: 45px;
+}
+.two:hover{
+  background-color: rgb(243, 157, 171);
+}
+a{
+  text-decoration: none;
+  color: #292f3d;
+}
+.av{
+  position: relative;
+  left: 330px;
+}
+.slide-content3{
+  color: rgb(6, 151, 187);
+  padding: 22px 10px 22px 10px;
+  border-bottom: 3px solid #18F4FF;
+}
+#slider{
+  width: 800px;
+  text-align: center;
+}
+#slider input[type=radio]{
+  display: none;
+}
+#slider label{
+  cursor: pointer;
+  text-decoration: none;
+}
+#slides{
+  position: relative;
+  left: 40px;
+  top: -260px;
+  position: relative;
+}
+#overflow{
+  width: 100%;
+  overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+#slides .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+  width: 100%;
+  line-height: 0;
+  height: 80px;
+}
+#slides .av{
+  margin-left: 0px;
+  width: 100px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+  #s{
+    margin-top: 8px;
+    margin-left: 180px;
+    font-size: 19px;
+    padding: 6px;
+    color: rgb(6, 151, 187);
+  }
+  #s:hover{
+    cursor: pointer;
+    background-color: rgb(224, 222, 222);
+    border-radius: 50%;
+  }
+  .fr{
+    margin-top: -25px;
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+@media only screen and (min-width: 768px){
+  body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #content{
+    width: 1200px;
+    height: 710px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #aside{
+    position: relative;
+    left: 20px;
+    right: 18px;
+    width: 200px;
+    height: 710px;
+    margin-right: 14px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+.a1{
+    flex: 33.33%;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a2{
+    flex: 33.33%;
+    width: 400px;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a3{
+    flex: 33.33%;
+    width: 400px;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a11{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+.a21{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+.a31{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+  .lo1{
+  color: #5C708A;text-align: center;position: relative;left: 87px;top: 10px;font-weight: 600;
+}
+  .lo{
+  background: #F0F1F5;border-radius: 4px;width: 240px;height: 215px;padding: 15px 20px 15px 20px;margin-bottom: 10px;
+  }
+  .loa{
+    margin-left: 34px;margin-bottom: -5px;font-size: 15px;
+  }
+  .lob{
+    margin-top: -5px;margin-left: 15px;line-height: 25px;
+  }
+  .loc{
+    font-size: 12px;position: relative;left: 16px;
+  }
+  #loa{
+    background: #fff;padding: 7px;border-radius: 50%;margin-left: 50px;margin-right: 20px;
+  }
+  #lob{
+    background: #fff;padding: 7px;border-radius: 50%;margin-right: 40px;
+  }
+  #slides{
+  position: relative;
+  width: 1500px;
+  left: 30px;
+  top: -260px;
+  position: relative;
+}
+}
+@media only screen and (max-width: 600px) {
+  body{
+    overflow-x: hidden;
+  }
+  #nav{
+  display: none;
+}
+  main{
+  flex: none;
+  overflow: hidden;
+}
+  #ain{
+  display: block;
+  overflow: hidden;
+}
+  .et{
+  position: relative;
+  top: 350px;
+  margin-left: -35px;
+  overflow: hidden;
+}
+  #sub-con{
+  display: block;
+  position: relative;
+  top: -100px;
+  left: -12px;
+  display: flexbox;
+  width: 370px;
+  flex: none;
+  margin-right: 2px;
+  height: 3120px;
+  overflow: hidden;
+}
+.a11,.a21,.a31{
+  background-color: #fff;
+  width: 325px;
+  margin-top: 10px;
+}
+.av{
+  position: relative;
+  left: 0px;
+  }
+ .imagestwo{
+  position: relative;
+  top: -580px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+}
+ .imagesw{
+  float: none;
+  position: relative;
+  left: 170px;
+}
+  #aside{
+  position: relative;
+  top: -100px;
+  height: 1200px;
+  }
+  #h{
+    display: none;
+  }
+  #aside{
+    margin-left: -40px;
+  overflow: hidden;
+  }
+  
+  .projects{
+    display: block;
+    margin-left: -5px;
+    width: 360px;
+    height: 1200px;
+  overflow: hidden;
+  }
+   #s{
+  margin-top: 8px;
+  margin-left: 165px;
+  font-size: 19px;
+  padding: 6px;
+  color: rgb(6, 151, 187);
+  } 
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(1),
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(1){
+    margin: 0;
+  }      
+  #slider{
+    width: 300px;
+    margin-left: -10px;
+    text-align: center;
+  }
+  #slider input[type=radio]{
+    display: none;
+  }
+  #slider label{
+    cursor: pointer;
+    text-decoration: none;
+  }
+  #slides{
+    position: relative;
+    left: 20px;
+    top: -200px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  #overflow{
+    width: 100%;
+    overflow: hidden;
+  }
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+  }
+  #slide2:checked ~ #slides .inner {
+    margin-left: -85%;
+  }
+  #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+  }
+  #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000. 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 100px;
+  }
+  #slides .av{
+    margin-left: -4px;
+    width: 91px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+  }
+  #slides .av1{
+    background: #fff;
+  }
+  #slides .av2{
+    background: #fff;
+  }
+  #slides .av3{
+    background: #fff;
+  }
+  #slides .av4{
+    background: #fff;
+  }
+  #controls{
+    margin: -310px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+  }
+  #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 22px;
+    height: 22px;
+    opacity: .4;
+  }
+  #controls label:hover{
+    opacity: 1;
+  }
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 50px -60px 0 0;
+    display: block;
+  }
+  #slide1:checked ~ #controls label:nth-last-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(2) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 50px 0 0 10px;
+    display: block;
+  }
+    #bullets{
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+    #bullets label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+  }
+    #slide1:checked ~ #bullets label:nth-child(1),
+    #slide2:checked ~ #bullets label:nth-child(2){
+    background: #444;
+  }
+  header input[type=text]{
+  border: none;
+  outline: none;
+  }
+  header input[type=text]:hover{
+  border: none;
+  border-color: white;
+  outline: none;
+  border-bottom: 2px solid rgb(31, 172, 207);
+  }
+  
+  .lo{
+  background: #F0F1F5;border-radius: 4px;width: 330px;height: 225px;padding: 15px 20px 15px 20px;margin-bottom: 10px;margin-left: 15px;
+  }
+  .loa{
+    margin-left: 54px;margin-bottom: -5px;font-size: 17px;
+  }
+  .lob{
+    margin-top: -5px;position: relative;left: 41px;line-height: 25px;
+  }
+  .loc{
+    font-size: 14px;position: relative;left: 28px;
+  }
+  #loa{
+    background: #fff;padding: 9px;border-radius: 50%;margin-left: 90px;margin-right: 20px;
+  }
+  #lob{
+    background: #fff;padding: 9px;border-radius: 50%;margin-right: 40px;
+  }
+  .lo1{
+  color: #5C708A;text-align: center;position: relative;left: 130px;top: 10px;font-weight: 600;
+}.a1{
+    flex: 33.33%;
+    width: 400px;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a2{
+    flex: 33.33%;
+    width: 400px;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a3{
+    flex: 33.33%;
+    width: 400px;
+    margin: 10px;
+    padding: 10px 0px 10px -10px;
+}
+.a11{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+.a21{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+.a31{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 10px 0px 10px -10px;
+}
+}
+
+</style>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body >
+<div id="nav">
+  <i id="q" class='fab fa-linkedin' style='font-size:29px ;background-color: rgb(31, 172, 207); color: white; text-align: center; padding: 4px;border-radius: 4px;margin-left: 20px; margin-bottom: 34px;'></i>
+  <button id="ab"><span class="material-icons">person_outline</span><br><br><br> <strong>PROFILE</strong></button>
+  <button id="ad"><span class="material-icons">people_outline</span><br><br><br> <strong>NETWORK</strong></button>
+  <button id="ad"><span class="material-icons">work_outline</span><br><br><br> <strong>JOBS</strong></button>
+  <button id="ad"><span class="material-icons">insert_chart_outlined</span><br><br><br> <strong>GROUPS</strong></button>
+  <button id="ad"><span class="material-icons">chat_bubble_outline</span><br><br><br> <strong>MEASSAGING</strong></button>
+  <button id="f"><span class="material-icons">apps</span><br><br><br> <strong>WORK</strong></button>
+</div>
+<div id="main">
+    <header style="border-bottom: 1px solid lightgray;"><button type="submit" style="padding: 6px 3px; margin-top: 2px; background: white; font-size: 17px; border: #fff; cursor: pointer;"><i class="fa fa-search" style="color: rgb(31, 172, 207);"></i></button> 
+    <input type="text" placeholder="Search" name="search">
+    <i id="h" class='far fa-bell ne' style='font-size: 19px; margin-left: 10px; padding: 10px 10px 0px 10px; float: right;'></i>
+    <i id="h" class='far fa-question-circle ne' style='font-size:19px;  padding: 10px; margin-left: 10px 10px 0px 10px; float: right;'></i>
+    </i><i id="h" class='far fa-keyboard ne' style='font-size: 19px; padding: 10px 10px 0px 10px;margin-left: 10px; float: right;'></i>
+    <i id="h" class='far fa-user ne' style='font-size: 19px;margin-left: 10px;  padding: 10px 10px 0px 10px; float: right;'></i>
+    </header>
+    <br>
+     <div id="ain">
+        <div id="content">
+            <div  class="et">
+                <img src="Me.jpg"  style="color: #292f3d; width: 100px; height: 100px; border-radius: 50%;"></img>
+                <p style="font-size: 20px;">Gali SaiPrasad</p>
+                <h3 style="font-size: 25px;">Welcome to my design <br/> Portfolio</h3>
+                <button class="one" style="font-size: 10px; padding: 18px;"><i class='fas fa-plus' > Follow</i></button>
+                <button class="two" style="font-size: 10px; padding: 18px;"><i class="fas fa-envelope" > Hire Me</i></button>
+            </div> 
+                    
+            <div class="ut">
+              <img class="imagesw"></img>
+              <img class="imagestwo" src="333333.jpg"></img>
+            </div>
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+        
+                <div id="slides">
+                    <div id="overflow">
+                       <div class="inner">
+                        <div class="av av1" style="font-size: small;font-family: Arial, Helvetica, sans-serif;">
+                            <div class="slide-content1">
+                                <a href="about.html" target="_self" class="abo"><strong>ABOUT</strong></a>
+                            </div>
+                        </div>
+                  
+                        <div class="av av2" style="font-size: small;">
+                            <div class="slide-content2">
+                                <a  href= "schooling.html" target="_self" class="abp"><strong>SCHOOLING</strong></a>
+                            </div>
+                        </div>  
+                  
+                        <div class="av av3" style="font-size: small;">
+                            <div class="slide-content3">
+                                <a  href="projects.html" target="_self" class="abg" style="color: #3392FF;"><strong>PROJECTS</strong></a> 
+                            </div>
+                        </div>   
+                  
+                        <div class="av av3" style="font-size: small;">
+                          <div class="slide-content4">
+                              <a  href="projects.html" target="_self" class="abg"><strong>EXPERIENCE</strong></a> 
+                          </div>
+                      </div> 
+                      <div class="av av4" style="font-size: small;">
+                        <div class="slide-content4" style="margin-left: 25px;">
+                            <a  href="projects.html" target="_self" class="abg"><strong>CERTIFICATES</strong></a> 
+                        </div>
+                    </div> 
+                       </div> 
+                    </div>
+                </div>    
+                <div id="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                </div>
+            </div>
+            <div id="sub-con">
+                  <div class="a1">
+                    <div class="a11" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="tribut.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>Tribute Page</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                    </div>
+
+         
+                    <div class="a11" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="tribut.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>Tribute Page</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                    </div> 
+                    
+                    <div class="a11" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="tribut.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>Tribute Page</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                    </div>
+                  </div>
+
+                  <div class="a2">
+                    <div class="a21" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="port.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>My-Portfolio</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                      </div>
+  
+                    <div class="a21" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="tribut.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>Tribute Page</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                     </div>
+
+                    <div class="a21" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="port.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>My-Portfolio</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                    </div>
+                  </div>
+                   
+                  <div class="a3">
+                    <div class="a31" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="port.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>My-Portfolio</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                      </div>
+  
+                    <div class="a31" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="tribut.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>Tribute Page</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                     </div>
+
+                    <div class="a31" style="color: #292F3D;box-shadow: 0 0 16px 0 rgba(48,63,80,.05);padding: 10px;border-radius: 4px;">
+                      <table><tr><td><img src="port.jpg" style="width: 50px;height: 50px;border-radius: 50%;"></td><td>My-Portfolio</td></tr></table>
+                        <br>
+                        <br>
+                        A portfolio may be a folder containing a student's best pieces and the student's evaluation of the strengths and weaknesses of the pieces. 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <table><tr><td><p class="r">#html</p><p class="r">#css</p></td></tr><span class="material-icons" id="s" style="position: relative;top: 35px;left: 100px;">launch</span></table>
+                    </div>
+                  </div>
+            </div>
+          </div>
+  
+
+        <div id="aside"  style="color: #292f3d;">
+          <h2  style="color: #5C708A;font-size: 13px;">SKILLS</h2>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <tr>
+          <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+          <td  style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">Web developement</p> <p style="color: #5C708A;font-size: 13px;font-weight: 400;">Certified From FreeCode Camp</p></td>
+          </tr>
+          </table>
+          <br>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <tr>
+          <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+          <td style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">Programming </p> <p style="color: #5C708A;font-size: 13px;font-weight: 400">Developing Gradually</p></td>
+          </tr>
+          </table>
+          <br>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <tr>
+          <td><span class="material-icons" style="padding: 10px;background-color: #F0F1F5;border-radius: 50%;color: #5C708A;">code</span></td>
+          <td style="line-height: 3px; padding-left: 15px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">JavaScript</p> <p style="color: #5C708A;font-size: 13px;">Certified From Freecode Camp</p></td>
+          </tr>
+          </table>
+          <br>
+          <h2  style="color: #5C708A;font-size: 13px;">INTERESTS</h2>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <td><img src="htm.png" style="width: 40px; height: 40px;"></td>
+          <td style="line-height: 4px; padding-left: 10px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">HTML</p> <p style="color: #5C708A;font-size: 13px;">12,34,567 Followers</p></td>
+          </tr>
+          </table>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <tr>
+          <td><img src="cs.png" style="width: 40px; height: 40px;"></td>
+          <td style="line-height: 4px; padding-left: 10px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">CSS</p> <p style="color: #5C708A;font-size: 13px;">2,34,567 Followers</p></td>
+          </tr>
+          </table>
+          <table style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <tr>
+          <td><img src="js.png" style="width: 30px; height: 30px;"></td>
+          <td style="line-height: 4px; padding-left: 20px;"><p style="font-weight: 500;font-size: 13px;color: #292f3d;line-height: 8px;">JavaScript</p> <p style="color: #5C708A;font-size: 13px;"> 11,04,567 Followers</p></td>
+          </tr>
+          </table>
+          <h2 style="font-size: 15px;color: #5C708A">Contact Me :</h2>
+          <table>
+            <tr>
+              <td><img src="mal.png" style="width: 30px; height: 20px;"></td>
+              <td style="padding-left: 7px;color: #292f3d;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">E-Mail</a></td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <td><img src="ked.png" style="width: 30px; height: 30px; color: gray;"></td>
+              <td style="padding-left: 7px;color: #292f3d;"><a href="www.linkedin.com/in/gali-sai-prasad-376195154">LinkedIn</a> 
+            </tr>
+           </table>
+           <br>
+           <table>
+            <tr>
+              <td><i class="fa fa-phone" style="font-size:24px; padding-left: 8px;"></i></td>
+              <td style="padding-left: 7px;color: #292f3d;"> 9121898369 </td>
+            </tr>
+          </table>
+          <br>
+          <div class="lo">
+            <table>
+            <tr><td class="lo1">Ad</td></tr>
+          </table>
+            <br>
+            <br>
+            <table>
+            <tr><span class="material-icons" id="loa">business</span><span class="material-icons" id="lob">group</span></tr>
+            <tr><p class="loa">Guest, explore relevant</p></tr>
+            <tr><p class="lob">opportunities with LinkedIn</p></tr>
+            <tr><td class="loc">Get the latest jobs and industry news</td></tr>
+          </table>
+          </div>
+          <br>
+          <h4 style="color: #5C708A;font-size: 13px;font-weight: 700;margin-left: 0px;">QUICK LINKS</h4>
+          <table style="margin-left: -6px;">
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">About</p></tr>
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">Careers</p></tr>
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">Ad Choices</p></tr>
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">Business Services</p></tr>
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">Business Services</p></tr>
+            <tr><span class="material-icons" style="color: #5C708A;">insert_link</span><p class="fr">Privacy & Terms</p></tr>
+          </table>
+          </div>
+        </div>
+    </div>  
+    </body>
+    </html>
